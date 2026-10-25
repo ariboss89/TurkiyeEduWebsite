@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="TurkiEdu mendampingi calon mahasiswa Indonesia memilih universitas di Turki, menyiapkan pendaftaran, dokumen, visa, tiket, dan tempat tinggal.">
+    <meta name="theme-color" content="#102a56">
+    <title>TurkiEdu — Wujudkan Kuliahmu di Türkiye</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TurkiyEdu.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="icon" href="~/images/logo.png" type="image/x-icon" />
+</head>
+<body>
+    <div class="topbar"><div class="container"><span>🎓 Pendampingan kuliah ke Türkiye untuk mahasiswa Indonesia</span><span>Universitas negeri & swasta • S1 & S2</span></div></div>
+
+    <header>
+        <div class="container nav">
+            <a class="brand" href="#home" aria-label="TurkiEdu beranda"><img src="~/images/logo.png" alt=""><span>Turki<span>Edu</span></span></a>
+            <button class="menu" aria-label="Buka menu" aria-expanded="false" onclick="toggleMenu()">☰</button>
+            <nav class="navlinks" id="navlinks">
+                <a href="#layanan" onclick="closeMenu()">Layanan</a><a href="#alur" onclick="closeMenu()">Alur pendaftaran</a><a href="#kampus" onclick="closeMenu()">Pilihan kampus</a><a href="#harga" onclick="closeMenu()">Paket</a>
+                <a class="btn" href="#konsultasi" onclick="closeMenu()">Konsultasi gratis ↗</a>
+            </nav>
+        </div>
+    </header>
+    <div class="">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div><div class="footer-brand"><img src="~/images/logo.png" alt=""><span>Turki<span>Edu</span></span></div><p>Pendampingan pendidikan untuk membantu calon mahasiswa Indonesia merencanakan studi di Türkiye dengan lebih terarah dan transparan.</p></div>
+                <div><h4>Jelajahi</h4><a href="#layanan">Layanan kami</a><a href="#alur">Alur pendaftaran</a><a href="#kampus">Pilihan kampus</a><a href="#harga">Paket layanan</a></div>
+                <div><h4>Hubungi kami</h4><a id="waFooter" href="https://wa.me/6281234567890" target="_blank" rel="noopener">WhatsApp: +62 812 6864 3631</a><a href="#konsultasi">Jadwalkan konsultasi</a><p>Indonesia · Melayani calon mahasiswa S1 & S2</p></div>
+            </div>
+            <div class="copyright">© <span id="year"></span> TurkiEdu. Semua hak dilindungi. Informasi paket bersifat indikatif; rincian akhir mengikuti perjanjian layanan tertulis.</div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/index.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
